@@ -1,0 +1,17 @@
+{
+  "name": "Show by roles",
+  "namespace": "uzgent\\ShowByRolesClass",
+  "description": "This module allows you to show a field to users with a specific role.",
+  "authors": [
+    {
+      "name": "Lieven Vaneeckhaute",
+      "email": "lieven.vaneeckhaute@uzgent.be",
+      "institution": "University Hospital Ghent"
+    }
+  ],
+  "documentation" : "howto.html",
+  "permissions": [
+    "redcap_data_entry_form"
+  ]
+
+}
