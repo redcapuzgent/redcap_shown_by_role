@@ -71,14 +71,16 @@ class ShowByRolesClass extends \ExternalModules\AbstractExternalModule {
      */
     public function parseAnnotationRoleIds($values,$projectRoles)
     {
-        $currentAnnotation = $values["field_annotation"];
-        if (strpos($currentAnnotation, self::annotation) != FALSE) {
-            $elements = explode("=", $currentAnnotation);
-            $foundUserRoleIds = $this->getUserRoleIds($elements, $projectRoles);
-        } else {
-            return null;
+        $rawAnnotation = $values["field_annotation"];
+        $currentAnnotations = explode("\n", $rawAnnotation);
+        foreach ($currentAnnotations as $currentAnnotation)
+        {
+            if (strpos($currentAnnotation, self::annotation) !== FALSE) {
+                $elements = explode("=", $currentAnnotation);
+                return $this->getUserRoleIds($elements, $projectRoles);
+            }
         }
-        return $foundUserRoleIds;
+        return null;
     }
 
     /**
