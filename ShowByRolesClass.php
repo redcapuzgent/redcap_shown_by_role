@@ -41,11 +41,12 @@ class ShowByRolesClass extends \ExternalModules\AbstractExternalModule {
     {
         echo "<script>";
         include "hideaway.js";
-
+        echo "function hideAll() { ";
         foreach ($fieldsToHide as $fieldToHide) {
             echo 'UZG_hideaway.hideIt("' . $fieldToHide . '");';
         }
-
+        echo "}";
+        echo "hideAll();\n";
         echo "</script>";
     }
 
