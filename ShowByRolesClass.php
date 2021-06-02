@@ -15,7 +15,7 @@ class ShowByRolesClass extends \ExternalModules\AbstractExternalModule {
 
         $projectRoles = \UserRights::getRoles();
         $fieldsToHide = [];
-        $metadata = $this->getMetadata($project_id);
+        $metadata = $this->getMetadata($project_id, $instrument);
         foreach($metadata as $fieldname => $values)
         {
             $foundUserRoleIds = ShowByRolesParser::parseAnnotationRoleIds($values, $projectRoles);
