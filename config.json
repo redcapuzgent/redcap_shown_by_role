@@ -1,7 +1,7 @@
 {
     "name": "Show by roles",
     "namespace": "uzgent\\ShowByRolesClass",
-    "description": "<b>This module has been deprecated, as its functionality can be built using REDCap's built-in @IF action tag (introduced in REDCap 11.4.0) and user-role smart variables (introduced in REDCap 11.2.0).</b><br>This module allows you to show a field to users with a specific role.",
+    "description": "<strong>This module has been deprecated, as its functionality can be built using REDCap's built-in @IF action tag (introduced in REDCap 11.4.0) and user-role smart variables (introduced in REDCap 11.2.0).</strong><br>This module allows you to show a field to users with a specific role.",
     "authors": [
         {
             "name": "Lieven Vaneeckhaute",
@@ -15,10 +15,7 @@
         }
     ],
     "documentation": "howto.html",
-    "permissions": [
-        "redcap_data_entry_form"
-    ],
-    "framework-version": 10,
+    "framework-version": 15,
     "compatibility": {
         "redcap-max-version": "11.3.99"
     }
